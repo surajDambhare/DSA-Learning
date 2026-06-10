@@ -51,7 +51,17 @@ public class LevelTwo {
         }
     }
     //4. Check if one of two given numbers is a multiple of the other.
+    public static boolean checkNumberMultiple(int num1, int num2){
+        if(num1 % num2 == 0 || num2 % num1 == 0){
+            return true;
+        }
 
+        if(num1 == 0 || num2 == 0){
+            return false;
+        }
+
+        return  false;
+    }
     //5. Take the hour of the day (0–23) and print “Good Morning”, “Good Afternoon”, “Good
     //Evening”, or “Good Night”.
     //6. Check voting eligibility for a given age (18+).
@@ -83,6 +93,8 @@ public class LevelTwo {
         System.out.println(checkGrade(75));
         System.out.println(checkGrade(100));
         System.out.println(checkGrade(65));
+
+        System.out.println(checkNumberMultiple(15, 15));
 
     }
 }
